@@ -3798,12 +3798,13 @@ expo-linear-gradient@~8.4.0:
   resolved "https://registry.yarnpkg.com/expo-linear-gradient/-/expo-linear-gradient-8.4.0.tgz#34e6f960b1971c57dacf7211c747ba490a76bf63"
   integrity sha512-f9JOXaIl0MR8RBYRIud5UAsEi52oz81XhQs73VUpujemHjOyHmrZa6dqwf399YOwI/WBwbpcINcUIw/mCYE1mA==
 
-expo-linking@~2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/expo-linking/-/expo-linking-2.0.0.tgz#c39f610825e99ef0d10e8d82fbcf7beed8456b00"
-  integrity sha512-/48/+MHa96l3/YgL0uM/hbli+H0J8XXAUWgMCBpTIcmUc0POYw4Xp+7BhXcTbPRZsVoOiAHAmKIsEjFVTd5L+A==
+expo-linking@~2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/expo-linking/-/expo-linking-2.0.1.tgz#0ac0298039b0f7f6c109d7efbbb661efc1c56760"
+  integrity sha512-S+Bb5u1rlld6ZICKOQ4B/htHiIbtd9eJMpwXoWMcl68V+UNNxJisB5lUZePXWSoHlb0QbQfVOAf48u2WD588lQ==
   dependencies:
     expo-constants "~9.3.3"
+    invariant "^2.2.4"
     qs "^6.5.0"
     url-parse "^1.4.4"
 
@@ -3837,10 +3838,10 @@ expo-sqlite@~8.5.0:
     "@expo/websql" "^1.0.1"
     lodash "^4.17.15"
 
-expo@^40.0.0:
-  version "40.0.0"
-  resolved "https://registry.yarnpkg.com/expo/-/expo-40.0.0.tgz#6caf03587532cd18b482991332a8b75eeca2fcb7"
-  integrity sha512-LT6Ae/Ms0qtRyJlJsj/FMB5AQpj6nED39SY9KqY4zK/uFG+R7DJ/4VUzkPued1mWtRUrtaqR+t88pA3p0vAWcg==
+expo@^40.0.1:
+  version "40.0.1"
+  resolved "https://registry.yarnpkg.com/expo/-/expo-40.0.1.tgz#20ae9f9c787ba1662037094dfd6982380f2c0288"
+  integrity sha512-9NrhimvP44I1aDjGHMU4F0izCyfFTTYAQ6xZpWpuc+ZWRZqg8Zv62zNRlzBn+Ydaf1heSucnlJJ3Sp2gMdOEnQ==
   dependencies:
     "@babel/runtime" "^7.1.2"
     "@expo/vector-icons" "^12.0.0"
@@ -3857,7 +3858,7 @@ expo@^40.0.0:
     expo-font "~8.4.0"
     expo-keep-awake "~8.4.0"
     expo-linear-gradient "~8.4.0"
-    expo-linking "~2.0.0"
+    expo-linking "~2.0.1"
     expo-location "~10.0.0"
     expo-permissions "~10.0.0"
     expo-secure-store "~9.3.0"
@@ -6204,6 +6205,13 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-native-camera@^3.42.3:
+  version "3.42.3"
+  resolved "https://registry.yarnpkg.com/react-native-camera/-/react-native-camera-3.42.3.tgz#825b4300fc88456761010cb139f0f5faa2a15a82"
+  integrity sha512-/MGDNlcagx/f7HPI0I+xT4N59UA0SE2c/D6BLNtqHzn1YHZj0QFVDbSzMTd3jWKzvHtGfet8rg6A2cZxY+ZvJw==
+  dependencies:
+    prop-types "^15.6.2"
+
 react-native-gesture-handler@~1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.8.0.tgz#18f61f51da50320f938957b0ee79bc58f47449dc"
@@ -6247,6 +6255,11 @@ react-native-tab-view@^2.11.0:
   version "2.13.0"
   resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-2.13.0.tgz#23037aa43b0f8f682ddc20415a4baaaf6f82ae8f"
   integrity sha512-AeYbp/u91+D/C9+PmVEPBmFb3ixv8IkLMC3Sc5MajJ/fg0Zl3Of+BcEknBvTnKoe7Fj2y8+Qf9zorBbh5xzh4A==
+
+react-native-uvc-camera@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-uvc-camera/-/react-native-uvc-camera-1.0.0.tgz#3cf477f4fc93d110538153275956091dc4fcdbab"
+  integrity sha512-C6TYUQ7NrImbK3R1Y4nhdZ2i0U6NvW1cHgsoparaZsY8TxLrheAD34oKito53rDZIn7g1KNrrzl3AjDNTVWnQw==
 
 react-native-web@~0.13.12:
   version "0.13.18"
@@ -6335,6 +6348,11 @@ react-timer-mixin@^0.13.4:
   version "0.13.4"
   resolved "https://registry.yarnpkg.com/react-timer-mixin/-/react-timer-mixin-0.13.4.tgz#75a00c3c94c13abe29b43d63b4c65a88fc8264d3"
   integrity sha512-4+ow23tp/Tv7hBM5Az5/Be/eKKF7DIvJ09voz5LyHGQaqqz9WV8YMs31eFvcYQs7d451LSg7kDJV70XYN/Ug/Q==
+
+react-webcam@^5.2.3:
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/react-webcam/-/react-webcam-5.2.3.tgz#be1ca38694c31a33220cc8ab9ce341358a03bcbc"
+  integrity sha512-7rBh4Veeumpy45ObkZCsG6zezaamkwK5Iqxc0AFhX2ZzWQZXZ+f61yJ1yIb9Y62U4d7KkfP/xEduBCRzzcN4Dw==
 
 react@16.13.1:
   version "16.13.1"
