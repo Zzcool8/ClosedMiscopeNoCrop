@@ -12,8 +12,8 @@ const CameraLoadingScreen = props => {
     const imgTakenHandler = async(uri) => {
         const data = new FormData();
         //data.append('name', 'testName');
-        data.append('MosquitoID', MosquitoID);
-        data.append('PictureNumber', PictureNumber);
+        data.append('MosquitoID', {MosquitoID});
+        data.append('PictureNumber', {PictureNumber});
         data.append('image', {
                 uri: uri,
                 type: 'image/jpeg',
@@ -51,13 +51,13 @@ const CameraLoadingScreen = props => {
             <TextInput
                 style={styles.input}
                 placeholder='e.g. Mosquito123'
-                onChangeText={(val) => setMosquitoID(val)} />
+                onChangeText={(MosquitoID) => setMosquitoID(MosquitoID)} />
                 
             <Text>Enter Picture Number:</Text>
             <TextInput 
                 style={styles.input}
                 placeholder='e.g. 1'
-                onChangeText={(val) => setPictureNumber(val)} />
+                onChangeText={(PictureNumber) => setPictureNumber(PictureNumber)} />
                 
             <Text>MosquitoID: {MosquitoID}, Picture Number: {PictureNumber}</Text>
         
