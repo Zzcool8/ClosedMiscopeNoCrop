@@ -6,14 +6,15 @@ import axios from 'axios';
 const CameraLoadingScreen = props => {
     const [MosquitoID, setMosquitoID] = useState('')
     const [PictureNumber, setPictureNumber] = useState('')
-    
+    const [SiteID, setSiteID] = useState('')
     const [uploadProgress, setUploadProgress] = useState();
     const [bgColor, setBgColor] = useState();
     const imgTakenHandler = async(uri) => {
         const data = new FormData();
         //data.append('name', 'testName');
-        data.append('MosquitoID', {MosquitoID});
-        data.append('PictureNumber', {PictureNumber});
+        data.append('MosquitoID', JSON.stringify({MosquitoID}));
+        data.append('PictureNumber', JSON.stringify({PictureNumber}));
+        data.append('SiteID', JSON.stringify({SiteID}));
         data.append('image', {
                 uri: uri,
                 type: 'image/jpeg',
@@ -30,7 +31,7 @@ const CameraLoadingScreen = props => {
             }
         }
 
-        await axios.post("https://appnocrop.azurewebsites.net/get_label",
+        await axios.post("https://closedmiscopetest.azurewebsites.net/get_label",
         data, options).then(res => {
             console.log(res.data);
             const dataResponse = res.data;
@@ -46,7 +47,8 @@ const CameraLoadingScreen = props => {
 
     return(
         <View style={styles.container}>
-            <Text>Enter Mosquito Picture Identification Information:</Text>
+            <Text>Please Enter Mosquito Identification Information</Text>
+            <Text>to help further develop the Byte Sight App</Text>
             <Text>Enter Mosquito ID:</Text>
             <TextInput
                 style={styles.input}
@@ -58,8 +60,14 @@ const CameraLoadingScreen = props => {
                 style={styles.input}
                 placeholder='e.g. 1'
                 onChangeText={(PictureNumber) => setPictureNumber(PictureNumber)} />
-                
-            <Text>MosquitoID: {MosquitoID}, Picture Number: {PictureNumber}</Text>
+
+            <Text>Enter Site ID:</Text>
+            <TextInput 
+                style={styles.input}
+                placeholder='e.g. 1'
+                onChangeText={(SiteID) => setSiteID(SiteID)} />  
+
+            <Text>MosquitoID: {MosquitoID}, Picture Number: {PictureNumber}, SiteID: {SiteID}</Text>
         
         
             <View style={styles.screen}>

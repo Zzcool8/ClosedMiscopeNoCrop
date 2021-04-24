@@ -61,22 +61,6 @@ const ImgPicker = props => {
         if(!image.cancelled){
             setPickedImage(image.uri);
             props.onImageTaken(image.uri);
-
-            const asset = await MediaLibrary.createAssetAsync(uri);
-            console.log('asset', asset);
-            MediaLibrary.createAlbumAsync('Expo', asset)
-                .then(() => {
-                  Alert.alert('Album created!')
-                })
-                .catch(error => {
-                  Alert.alert('An Error Occurred!')
-                });
-
-
-
-
-
-
         }
       };
 
